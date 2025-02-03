@@ -157,14 +157,29 @@ const VideoCarousel = () => {
   const handleLoadedMetaData = (i, e) => setLoadedData((pre) => [...pre, e]);
 
   const handleSlideClick = (index) => {
+
+    let span = videoSpanRef.current;
     // Stop the current animation and reset the video playback state
     if (animRef.current) {
       animRef.current.kill();
     }
+
+    videoRef.current[videoId].currentTime = 0; // Restart the video
     videoRef.current[videoId].pause();
-    gsap.set(videoSpanRef.current[videoId], { width: "0%", backgroundColor: "#afafaf" });
-    gsap.set(videoDivRef.current[videoId], { width: "12px" });
+    
+    // Reset the current progress bar to a button
+    gsap.to(videoDivRef.current[videoId], {
+      width: "12px",
+    });
+    gsap.to(span[videoId], {
+      width: "12px",
+      backgroundColor: "#afafaf",
+    });
+  
+    // Update the video state to the selected slide
     setVideo((pre) => ({ ...pre, videoId: index, isPlaying: true, startPlay: false }));
+  
+    
   };
 
   return (
@@ -174,6 +189,8 @@ const VideoCarousel = () => {
           <div key={list.id} id="slider" className="sm:pr-20 pr-10">
             <div className="video-carousel_container">
               <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
+                <button onClick={() => handleSlideClick(i)}>
+
                 <video
                   id="video"
                   playsInline={true}
@@ -193,6 +210,8 @@ const VideoCarousel = () => {
                 >
                   <source src={list.video} type="video/mp4" />
                 </video>
+
+                </button>
               </div>
 
               <div className="absolute top-12 left-[5%] z-10">
