@@ -8,6 +8,22 @@
   box-sizing: border-box;
 }
 
+/* Por defecto, mostramos el video de escritorio y ocultamos el de móvil */
+.video-mobile {
+  display: none;
+}
+
+/* En pantallas con ancho máximo de 760px, ocultamos el de escritorio y mostramos el de móvil */
+@media (max-width: 760px) {
+  .video-desktop {
+    display: none;
+  }
+  .video-mobile {
+    display: block;
+  }
+}
+
+
 body {
   color: white;
   width: 100dvw;
