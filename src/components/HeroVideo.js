@@ -28,7 +28,6 @@ const HeroVideo = () => {
       autoPlay
       muted
       playsInline
-      loop
       className="w-full h-full object-cover"
       key={videoSrc}
     >
