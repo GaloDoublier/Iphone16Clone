@@ -2,15 +2,37 @@
 import { rightImg, watchImg } from '@/utils'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React from 'react'
 import VideoCarousel from './VideoCarousel'
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Highlights = () => {
 
-  useGSAP(()=>{
-    gsap.to('#title', {duration: 2, opacity: 1, y: 0});
-    gsap.to('.link', {duration: 1.5, opacity: 1, y: 0, stagger: 0.25});
-  },[])
+  useGSAP(() => {
+    gsap.to('#title', {
+      duration: 0.5,
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: '#title',
+        start: 'top 80%',
+        toggleActions: 'play reverse play reverse',
+      },
+    });
+    gsap.to('.link', {
+      duration: 1,
+      opacity: 1,
+      y: 0,
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: '#title',
+        start: 'top 80%',
+        toggleActions: 'play reverse play reverse',
+      },
+    });
+  }, []);
 
   return (
     <section id="highlights" className="w-screen overflow-hidden h-full common-padding bg-zinc">
@@ -30,7 +52,6 @@ const Highlights = () => {
               ver el evento
               <img src={rightImg} alt="right" className='ml-2'/>
             </p>
-
 
           </div>
         </div>

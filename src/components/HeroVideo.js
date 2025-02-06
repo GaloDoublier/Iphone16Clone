@@ -1,4 +1,3 @@
-// components/HeroVideo.js
 "use client";
 
 import { useState, useEffect } from "react";
@@ -8,7 +7,6 @@ const HeroVideo = () => {
   const [videoSrc, setVideoSrc] = useState(heroVideo);
 
   useEffect(() => {
-    // This code runs only on the client
     const updateVideo = () => {
       if (window.innerWidth < 760) {
         setVideoSrc(smallHeroVideo);
