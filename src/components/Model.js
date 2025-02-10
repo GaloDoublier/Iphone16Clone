@@ -3,17 +3,20 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ModelView from './ModelView'
-import { useState,useRef } from 'react'
+import { useState,useRef, useEffect } from 'react'
 import { yellowImg } from '@/utils'
 import * as THREE from 'three'
 gsap.registerPlugin(ScrollTrigger);
 
 import dynamic from "next/dynamic";
 import { models, sizes } from '@/constants'
+import Animation from './Animation'
 
 const IphoneScene = dynamic(() => import("../components/IphoneScene"), {
   ssr: false,
 });
+
+
 
 const Model = () => {
 
@@ -21,7 +24,7 @@ const Model = () => {
     const [model, setModel] = useState({
         id:1,
         title:"iPhone 16 Pro", 
-        colors:["#8F8A81", "FFE7B9", "#6F6C64"],
+        color:["#8F8A81", "FFE7B9", "#6F6C64"],
         img: yellowImg
     });
 
@@ -36,6 +39,17 @@ const Model = () => {
     // rotation
     const [smallRotation, setSmallRotation] = useState({x:0, y:0, z:0});
     const [largeRotation, setLargeRotation] = useState({x:0, y:0, z:0});
+
+    const tl = gsap.timeline();
+
+    useEffect(() => {
+      if (size==="large") {
+        Animation(tl,small,smallRotation, "#view1", "#view2",{transform : "translateX(-100%)", duration: 2});
+      }
+      if (size==="small") {
+        Animation(tl,large,largeRotation, "#view2", "#view1",{transform : "translateX(0)", duration: 2});
+      }
+    }, [size]);
 
     useGSAP(()=>{
         gsap.to('#heading', {
@@ -58,7 +72,7 @@ const Model = () => {
             </h2>
 
             <div className="flex flex-col items-center mt-5">
-                <div className="w-full h-[75vh] md:h-[90vh] overflow-hidden relative"> 
+                <div className="w-full h-[75vh] md:h-[80vh] overflow-hidden relative"> 
 
                 {/* <ThreeScene /> */}
 
