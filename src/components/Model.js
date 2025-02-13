@@ -72,7 +72,7 @@ const Model = () => {
             </h2>
 
             <div className="flex flex-col items-center mt-5">
-                <div className="w-full h-[75vh] md:h-[80vh] overflow-hidden relative"> 
+                <div className="w-full h-[75vh] md:h-[80vh]  overflow-hidden relative"> 
 
                 {/* <ThreeScene /> */}
 
@@ -106,7 +106,7 @@ const Model = () => {
                   <div className='flex-center'>
                     <ul className='color-container'>
                       {models.map((item,index)=>(
-                        <li key={index} className={`w-6 h-6 rounded-full mx-2 cursor-pointer border-[3px] ${model.id===index+1 ? "border-white" : "border-transparent"}`} style={{backgroundColor:item.color[0]}} onClick={()=>setModel(item)}>
+                        <li key={index} className={`w-8 h-8 rounded-full mx-2 cursor-pointer border-[3px] ${model.id===index+1 ? "border-white" : "border-transparent"}`} style={{backgroundColor:item.color[0]}} onClick={()=>setModel(item)}>
 
                         </li>
                       ))}
@@ -114,7 +114,7 @@ const Model = () => {
 
                     <button className='size-btn-container'>
                       {sizes.map(({label,value})=>(
-                        <span key={label} className='size-btn' style={{backgroundColor: value===size ? 'white' : 'transparent', color: size === value ? 'black' : 'white'}} onClick={()=>setSize(value)}>
+                        <span key={label} className='size-btn font-semibold' style={{backgroundColor: value===size ? 'white' : 'transparent', color: size === value ? 'black' : 'white'}} onClick={()=>setSize(value)}>
                           {label}
                         </span>
                       ))}

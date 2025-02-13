@@ -3,6 +3,8 @@ import { Navbar } from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Highlights from "@/components/Highlights";
 import Model from "@/components/Model";
+import Titanium from "@/components/Titanium";
+import FrameVideo from "@/components/FrameVideo";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <Hero/>
       <Highlights/>
       <Model/>
+      <Titanium/>
+      <FrameVideo/>
     </main>
   );
 }

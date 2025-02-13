@@ -2,10 +2,8 @@
 
 const Animation = (timeline,rotationRef,rotationState,firstTarget,secondTarget,animationProps) => {
     //get back to first original rotation state
-    console.log(rotationState)
 
     if (rotationState.x === 0 && rotationState.y === 0 && rotationState.z === 0) {
-        console.log("si")
         timeline.to(rotationRef.current.rotation, {
             y:0,
             duration:1,
@@ -13,7 +11,7 @@ const Animation = (timeline,rotationRef,rotationState,firstTarget,secondTarget,a
           })
     }
     else{
-        console.log("no")
+      console.log(rotationRef.current.rotation)
         timeline.to(rotationRef.current.rotation, {
             y:rotationState,
             duration:1,

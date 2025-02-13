@@ -1,7 +1,10 @@
 export const heroImg = "/assets/images/hero.jpeg";
 
 export const heroVideo = "/assets/videos/hero.mp4";
+export const horseVideo = "/assets/videos/horseVideo.mp4";
 export const smallHeroVideo = "/assets/videos/smallHero.mp4";
+export const largeTitanium = "/assets/videos/largeTitanium.mp4";
+export const smallTitanium = "/assets/videos/smallTitanium.mp4";
 export const highlightFirstVideo = "/assets/videos/highlight-first.mp4";
 export const highlightSecondVideo = "/assets/videos/hightlight-sec.mp4";
 export const highlightThirdVideo = "/assets/videos/hightlight-third.mp4";
