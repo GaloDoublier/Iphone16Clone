@@ -45,6 +45,10 @@ canvas {
   max-width: 1120px;
 }
 
+.text-section {
+  background: radial-gradient(40% 50% at center, #2c201a, #000);
+}
+
 .video-container::before,
 .video-container::after {
   content: '';
