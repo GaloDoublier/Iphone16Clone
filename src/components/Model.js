@@ -68,7 +68,7 @@ const Model = () => {
     <section className="common-padding">
         <div className="screen-max-width">
             <h2 id="heading" className="section-heading">
-                Take a closer look
+              Míralo en detalle.
             </h2>
 
             <div className="flex flex-col items-center mt-5">

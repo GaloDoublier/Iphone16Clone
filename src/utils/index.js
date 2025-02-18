@@ -20,12 +20,20 @@ export const rightImg = "/assets/images/right.svg";
 export const replayImg = "/assets/images/replay.svg";
 export const playImg = "/assets/images/play.svg";
 export const pauseImg = "/assets/images/pause.svg";
+export const a18Icon = "/assets/images/Icons/a18.png";
+export const a18proIcon = "/assets/images/Icons/a18pro.png";
+export const batteryIcon = "/assets/images/Icons/battery.png";
+export const cam16Icon = "/assets/images/Icons/cam16.png";
+export const cam16proIcon = "/assets/images/Icons/cam16pro.png";
+export const intelligenceIcon = "/assets/images/Icons/intelligence.png";
+export const sideButtonIcon = "/assets/images/Icons/sideButton.png";
+
 
 export const yellowImg = "/assets/images/yellow.jpg";
 export const blueImg = "/assets/images/blue.jpg";
 export const whiteImg = "/assets/images/white.jpg";
 export const blackImg = "/assets/images/black.jpg";
-export const explore1Img = "/assets/images/explore1.jpg";
-export const explore2Img = "/assets/images/explore2.jpg";
-export const chipImg = "/assets/images/chip.jpeg";
 export const frameImg = "/assets/images/frame.png";
+export const iphone16Img = "/assets/images/iphone16.jpg";
+export const iphone16proImg = "/assets/images/iphone16pro.jpg";
+

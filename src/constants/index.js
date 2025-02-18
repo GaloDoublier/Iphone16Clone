@@ -9,7 +9,7 @@ import {
     yellowImg,
   } from "../utils";
   
-  export const navLists = ["Store", "Mac", "iPhone", "Support"];
+  export const navLists = ["Tienda", "Mac", "iPhone", "Soporte"];
   
   export const hightlightsSlides = [
     {
@@ -79,9 +79,9 @@ import {
   ];
   
   export const footerLinks = [
-    "Privacy Policy",
-    "Terms of Use",
-    "Sales Policy",
+    "politica de privacidad",
+    "Terminos de uso",
+    "politicas de venta",
     "Legal",
-    "Site Map",
+    "Mapa del sitio",
   ];
